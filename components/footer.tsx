@@ -110,7 +110,7 @@ export function Footer() {
             </ul>
             <div className="flex gap-3">
               <a
-                href="https://wa.me/5548991142268"
+                href="https://wa.me/+555496471530"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"

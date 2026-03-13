@@ -23,7 +23,7 @@ export function Contact() {
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg"
             asChild
           >
-            <a href="https://wa.me/5548991142268" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+555496471530" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-3 h-6 w-6" />
               Conversar no WhatsApp
             </a>

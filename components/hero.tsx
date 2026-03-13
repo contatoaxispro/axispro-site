@@ -44,7 +44,7 @@ export function Hero() {
               className="border-primary/30 bg-white text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-base font-medium transition-all duration-300"
               asChild
             >
-              <a href="https://wa.me/5548991142268" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/+555496471530" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Falar no WhatsApp
               </a>
