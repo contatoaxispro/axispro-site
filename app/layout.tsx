@@ -3,13 +3,15 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geist = Geist({ subsets: ['latin'] })
+const geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'AxisPro - Inteligência Corporativa | Automação e Sistemas para Empresas',
-  description: 'A Axispro desenvolve plataformas de automação e inteligência aplicada para organizar comunicação, processos e operações empresariais. Soluções SaaS para empresas que querem crescer.',
-  keywords: 'automação empresarial, inteligência corporativa, SaaS, WhatsApp business, prospecção automatizada, gestão de processos',
+  title: 'AxisPro Inteligência Corporativa | Processos otimizados com IA para vender melhor',
+  description:
+    'A Axispro otimiza processos com IA para empresas que querem parar de perder oportunidade por falha de execução, atraso operacional e excesso de dependência humana.',
+  keywords:
+    'IA para empresas, otimização de processos, inteligência corporativa, WhatsApp empresarial, prospecção automatizada, execução comercial, operação comercial',
   icons: {
     icon: [
       {
@@ -36,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className="font-sans antialiased">
+      <body className={`${geist.className} ${geistMono.variable} antialiased`}>
         {children}
         <Analytics />
       </body>

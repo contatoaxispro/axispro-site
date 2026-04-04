@@ -4,6 +4,7 @@ import { Products } from "@/components/products"
 import { Process } from "@/components/process"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Process />
       <Contact />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   )
 }
