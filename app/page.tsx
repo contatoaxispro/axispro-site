@@ -1,21 +1,25 @@
-import { Hero } from "@/components/hero"
-import { About } from "@/components/about"
-import { Products } from "@/components/products"
-import { Process } from "@/components/process"
-import { Contact } from "@/components/contact"
+import { Navbar } from "@/components/navbar"
+import { HeroSection } from "@/components/hero-section"
+import { ConceptSection } from "@/components/concept-section"
+import { BrandSection } from "@/components/brand-section"
+import { SolutionsSection } from "@/components/solutions-section"
+import { ComparisonSection } from "@/components/comparison-section"
+import { AiVisionSection } from "@/components/ai-vision-section"
+import { CtaSection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
-import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <About />
-      <Products />
-      <Process />
-      <Contact />
+    <main className="bg-[#080a0e] text-white">
+      <Navbar />
+      <HeroSection />
+      <ConceptSection />
+      <BrandSection />
+      <SolutionsSection />
+      <ComparisonSection />
+      <AiVisionSection />
+      <CtaSection />
       <Footer />
-      <FloatingWhatsApp />
     </main>
   )
 }
