@@ -6,7 +6,6 @@ export function AiVisionSection() {
   return (
     <section className="relative overflow-hidden bg-[#020812] py-28 lg:py-36">
       
-      {/* IMAGEM DE FUNDO */}
       <Image
         src="/images/ai-vision-bg.png"
         alt="Fundo tecnológico AxisPRO"
@@ -14,10 +13,8 @@ export function AiVisionSection() {
         className="object-cover object-center opacity-80"
       />
 
-      {/* OVERLAY */}
       <div className="absolute inset-0 bg-[#020812]/60" />
 
-      {/* CONTEÚDO */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 text-center">
         
         <h2 className="mb-20 text-4xl font-black leading-tight text-white md:text-5xl">
@@ -46,32 +43,22 @@ export function AiVisionSection() {
             </span>
           </p>
 
-          {/* FRASE REFINADA */}
+          {/* FRASE COM ASPAS */}
           <div className="pt-12 flex justify-center">
             <div className="relative max-w-3xl px-8 py-8 rounded-2xl border border-orange-500/20 bg-white/[0.02] backdrop-blur-sm">
 
-              {/* LABEL EM CIMA */}
               <div className="mb-6">
                 <span className="text-xs uppercase tracking-[0.35em] text-gray-400">
                   Acreditamos
                 </span>
               </div>
 
-              {/* ASPAS */}
-              <span className="absolute -top-4 -left-3 text-5xl text-orange-500/10 font-serif">
-                “
-              </span>
-              <span className="absolute -bottom-6 -right-3 text-5xl text-orange-500/10 font-serif">
-                ”
-              </span>
-
-              {/* TEXTO MAIS ELEGANTE */}
               <p className="text-xl md:text-2xl font-medium leading-relaxed text-gray-200 text-center">
-                O futuro não será dominado pela inteligência artificial.
+                "O futuro não será dominado pela inteligência artificial.
               </p>
 
               <p className="mt-4 text-xl md:text-2xl font-semibold leading-relaxed text-orange-400 text-center">
-                Será conduzido por quem sabe trabalhar com ela.
+                Será conduzido por quem sabe trabalhar com ela."
               </p>
 
             </div>
