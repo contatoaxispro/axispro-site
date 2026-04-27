@@ -1,32 +1,155 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { X, Target, TrendingUp, MessageCircle, Mail, ShoppingCart, Headphones, Radio, Database, Zap, BarChart3, Search, Filter, AlertTriangle, Play, UserCheck, Send, FolderOpen, Users } from "lucide-react"
+import {
+  X,
+  Target,
+  TrendingUp,
+  MessageCircle,
+  Mail,
+  ShoppingCart,
+  Headphones,
+  Radio,
+  Database,
+  Zap,
+  BarChart3,
+  Search,
+  Filter,
+  AlertTriangle,
+  Play,
+  UserCheck,
+  Send,
+  FolderOpen,
+  Users,
+  CreditCard,
+  Repeat,
+  RefreshCcw,
+} from "lucide-react"
 
 const traditional = [
-  { icon: Search, text: "Prospecção manual e listas genéricas", badge: "Baixa assertividade" },
-  { icon: Filter, text: "Leads entrando de forma irregular no funil", badge: "Fluxo instável" },
-  { icon: MessageCircle, text: "WhatsApp usado de forma improvisada por vendedores", badge: "Comunicação desorganizada" },
-  { icon: AlertTriangle, text: "Perda de mensagens e solicitações de clientes", badge: "Oportunidades perdidas" },
-  { icon: Play, text: "Pedidos em lives ou redes sociais se perdem nos comentários", badge: "Retrabalho e erros" },
-  { icon: UserCheck, text: "Atendimento dependente da disponibilidade humana", badge: "Horário limitado" },
-  { icon: Send, text: "Disparo manual de mensagens para grupos e clientes", badge: "Escala limitada" },
-  { icon: FolderOpen, text: "Informações comerciais espalhadas entre pessoas e sistemas", badge: "Falta de visibilidade" },
-  { icon: Users, text: "Processos comerciais dependentes de esforço humano", badge: "Operação pesada" },
-  { icon: BarChart3, text: "Decisões baseadas em percepção e urgência", badge: "Baixa previsibilidade" },
+  {
+    icon: Search,
+    text: "Prospecção manual e listas genéricas",
+    badge: "Baixa assertividade",
+  },
+  {
+    icon: Filter,
+    text: "Leads entrando de forma irregular no funil",
+    badge: "Fluxo instável",
+  },
+  {
+    icon: MessageCircle,
+    text: "WhatsApp usado de forma improvisada por vendedores",
+    badge: "Comunicação desorganizada",
+  },
+  {
+    icon: AlertTriangle,
+    text: "Perda de mensagens e solicitações de clientes",
+    badge: "Oportunidades perdidas",
+  },
+  {
+    icon: Play,
+    text: "Pedidos em lives ou redes sociais se perdem nos comentários",
+    badge: "Retrabalho e erros",
+  },
+  {
+    icon: UserCheck,
+    text: "Atendimento dependente da disponibilidade humana",
+    badge: "Horário limitado",
+  },
+  {
+    icon: Send,
+    text: "Disparo manual de mensagens para grupos e clientes",
+    badge: "Escala limitada",
+  },
+  {
+    icon: CreditCard,
+    text: "Clientes inadimplentes dependem de cobrança manual",
+    badge: "Receita parada",
+  },
+  {
+    icon: Repeat,
+    text: "Recompra depende da memória da equipe ou do vendedor",
+    badge: "Recorrência perdida",
+  },
+  {
+    icon: FolderOpen,
+    text: "Informações comerciais espalhadas entre pessoas e sistemas",
+    badge: "Falta de visibilidade",
+  },
+  {
+    icon: Users,
+    text: "Processos comerciais dependentes de esforço humano",
+    badge: "Operação pesada",
+  },
+  {
+    icon: BarChart3,
+    text: "Decisões baseadas em percepção e urgência",
+    badge: "Baixa previsibilidade",
+  },
 ]
 
 const axispro = [
-  { icon: Target, text: "Prospecção estruturada com inteligência de dados e automação", badge: "Alta assertividade" },
-  { icon: TrendingUp, text: "Fluxo constante e escalável de oportunidades qualificadas", badge: "Funil previsível" },
-  { icon: MessageCircle, text: "Comunicação estruturada e governada como processo comercial", badge: "Conversas produtivas" },
-  { icon: Mail, text: "Centralização e organização automática das interações", badge: "Nenhuma oportunidade se perde" },
-  { icon: ShoppingCart, text: "Captura automática de pedidos e registros em tempo real", badge: "Pedidos organizados e rastreáveis" },
-  { icon: Headphones, text: "Secretaria inteligente operando 24 horas por dia", badge: "Atendimento contínuo e profissional" },
-  { icon: Radio, text: "Comunicação em escala com controle institucional", badge: "Alcance com governança" },
-  { icon: Database, text: "Fluxo organizado de dados e inteligência operacional", badge: "Visão completa do negócio" },
-  { icon: Zap, text: "Operação automatizada com supervisão estratégica", badge: "Escala com eficiência" },
-  { icon: BarChart3, text: "Decisões orientadas por dados e inteligência corporativa", badge: "Alta previsibilidade" },
+  {
+    icon: Target,
+    text: "Prospecção estruturada com inteligência de dados e automação",
+    badge: "Alta assertividade",
+  },
+  {
+    icon: TrendingUp,
+    text: "Fluxo constante e escalável de oportunidades qualificadas",
+    badge: "Funil previsível",
+  },
+  {
+    icon: MessageCircle,
+    text: "Comunicação estruturada e governada como processo comercial",
+    badge: "Conversas produtivas",
+  },
+  {
+    icon: Mail,
+    text: "Centralização e organização automática das interações",
+    badge: "Nenhuma oportunidade se perde",
+  },
+  {
+    icon: ShoppingCart,
+    text: "Captura automática de pedidos e registros em tempo real",
+    badge: "Pedidos organizados e rastreáveis",
+  },
+  {
+    icon: Headphones,
+    text: "Secretaria inteligente operando 24 horas por dia",
+    badge: "Atendimento contínuo e profissional",
+  },
+  {
+    icon: Radio,
+    text: "Comunicação em escala com controle institucional",
+    badge: "Alcance com governança",
+  },
+  {
+    icon: RefreshCcw,
+    text: "Lembretes inteligentes para clientes com pagamentos pendentes",
+    badge: "Receita recuperada",
+  },
+  {
+    icon: Repeat,
+    text: "Ciclo automático de recompra acionando clientes no momento certo",
+    badge: "Recorrência automatizada",
+  },
+  {
+    icon: Database,
+    text: "Fluxo organizado de dados e inteligência operacional",
+    badge: "Visão completa do negócio",
+  },
+  {
+    icon: Zap,
+    text: "Operação automatizada com supervisão estratégica",
+    badge: "Escala com eficiência",
+  },
+  {
+    icon: BarChart3,
+    text: "Decisões orientadas por dados e inteligência corporativa",
+    badge: "Alta previsibilidade",
+  },
 ]
 
 export function ComparisonSection() {
@@ -44,8 +167,10 @@ export function ComparisonSection() {
       },
       { threshold: 0.05 }
     )
+
     const animatables = sectionRef.current?.querySelectorAll(".animate-on-scroll")
     animatables?.forEach((el) => observer.observe(el))
+
     return () => observer.disconnect()
   }, [])
 
@@ -71,6 +196,7 @@ export function ComparisonSection() {
               Comparativo
             </span>
           </div>
+
           <div
             className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 mt-3"
             style={{ transitionDelay: "100ms" }}
@@ -80,6 +206,7 @@ export function ComparisonSection() {
               <span className="text-orange-500">inteligência corporativa.</span>
             </h2>
           </div>
+
           <div
             className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 mt-4"
             style={{ transitionDelay: "150ms" }}
@@ -103,18 +230,30 @@ export function ComparisonSection() {
                 <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
                   <X className="w-4 h-4 text-gray-400" />
                 </div>
+
                 <div>
-                  <p className="text-white font-bold text-sm uppercase tracking-wider">Operação Tradicional</p>
-                  <p className="text-gray-500 text-xs">Esforço manual, retrabalho e oportunidades perdidas.</p>
+                  <p className="text-white font-bold text-sm uppercase tracking-wider">
+                    Operação Tradicional
+                  </p>
+                  <p className="text-gray-500 text-xs">
+                    Esforço manual, retrabalho e oportunidades perdidas.
+                  </p>
                 </div>
               </div>
+
               <div className="divide-y divide-white/[0.06]">
                 {traditional.map(({ icon: Icon, text, badge }) => (
-                  <div key={text} className="flex items-center justify-between gap-3 px-5 py-3.5 hover:bg-white/[0.02] transition-colors">
+                  <div
+                    key={text}
+                    className="min-h-[76px] flex items-center justify-between gap-3 px-5 py-3.5 hover:bg-white/[0.02] transition-colors"
+                  >
                     <div className="flex items-center gap-3 min-w-0">
                       <Icon className="w-4 h-4 text-gray-500 shrink-0" />
-                      <p className="text-gray-400 text-sm leading-snug">{text}</p>
+                      <p className="text-gray-400 text-sm leading-snug">
+                        {text}
+                      </p>
                     </div>
+
                     <span className="text-gray-500 text-xs font-medium whitespace-nowrap shrink-0 ml-2">
                       {badge}
                     </span>
@@ -130,7 +269,8 @@ export function ComparisonSection() {
                   className="w-14 h-14 rounded-full flex items-center justify-center font-black text-sm text-white"
                   style={{
                     background: "radial-gradient(circle, #f97316 0%, #c2410c 100%)",
-                    boxShadow: "0 0 30px rgba(249,115,22,0.5), 0 0 60px rgba(249,115,22,0.2)",
+                    boxShadow:
+                      "0 0 30px rgba(249,115,22,0.5), 0 0 60px rgba(249,115,22,0.2)",
                   }}
                 >
                   VS
@@ -143,12 +283,16 @@ export function ComparisonSection() {
               className="rounded-2xl overflow-hidden"
               style={{
                 border: "1px solid rgba(249,115,22,0.5)",
-                boxShadow: "0 0 30px rgba(249,115,22,0.12), 0 0 60px rgba(249,115,22,0.05)",
+                boxShadow:
+                  "0 0 30px rgba(249,115,22,0.12), 0 0 60px rgba(249,115,22,0.05)",
               }}
             >
               <div
                 className="flex items-center gap-3 px-5 py-4 border-b"
-                style={{ borderColor: "rgba(249,115,22,0.3)", background: "rgba(249,115,22,0.06)" }}
+                style={{
+                  borderColor: "rgba(249,115,22,0.3)",
+                  background: "rgba(249,115,22,0.06)",
+                }}
               >
                 <div
                   className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
@@ -159,22 +303,34 @@ export function ComparisonSection() {
                 >
                   <span className="text-white font-black text-xs">A</span>
                 </div>
+
                 <div>
-                  <p className="text-white font-bold text-sm uppercase tracking-wider">Operação com AxisPRO</p>
-                  <p className="text-orange-400/80 text-xs">Inteligência corporativa aplicada ao comercial.</p>
+                  <p className="text-white font-bold text-sm uppercase tracking-wider">
+                    Operação com AxisPRO
+                  </p>
+                  <p className="text-orange-400/80 text-xs">
+                    Inteligência corporativa aplicada ao comercial.
+                  </p>
                 </div>
               </div>
-              <div className="divide-y bg-[#0d1117]" style={{ borderColor: "rgba(249,115,22,0.15)" }}>
+
+              <div
+                className="divide-y bg-[#0d1117]"
+                style={{ borderColor: "rgba(249,115,22,0.15)" }}
+              >
                 {axispro.map(({ icon: Icon, text, badge }) => (
                   <div
                     key={text}
-                    className="flex items-center justify-between gap-3 px-5 py-3.5 transition-colors hover:bg-orange-500/5"
+                    className="min-h-[76px] flex items-center justify-between gap-3 px-5 py-3.5 transition-colors hover:bg-orange-500/5"
                     style={{ borderColor: "rgba(249,115,22,0.1)" }}
                   >
                     <div className="flex items-center gap-3 min-w-0">
                       <Icon className="w-4 h-4 text-orange-500 shrink-0" />
-                      <p className="text-gray-300 text-sm leading-snug">{text}</p>
+                      <p className="text-gray-300 text-sm leading-snug">
+                        {text}
+                      </p>
                     </div>
+
                     <span className="text-orange-500 text-xs font-semibold whitespace-nowrap shrink-0 ml-2">
                       {badge}
                     </span>
@@ -191,7 +347,8 @@ export function ComparisonSection() {
             className="w-14 h-14 rounded-full flex items-center justify-center font-black text-sm text-white"
             style={{
               background: "radial-gradient(circle, #f97316 0%, #c2410c 100%)",
-              boxShadow: "0 0 30px rgba(249,115,22,0.5)",
+              boxShadow:
+                "0 0 30px rgba(249,115,22,0.5), 0 0 60px rgba(249,115,22,0.2)",
             }}
           >
             VS
@@ -204,9 +361,12 @@ export function ComparisonSection() {
           style={{ transitionDelay: "300ms" }}
         >
           <p className="text-gray-300 text-sm">
-            Empresas tradicionais operam com <span className="text-white font-bold">esforço.</span>
+            Empresas tradicionais operam com{" "}
+            <span className="text-white font-bold">esforço.</span>
           </p>
+
           <div className="hidden sm:block w-px h-6 bg-orange-500/30" />
+
           <p className="text-gray-300 text-sm">
             Empresas inteligentes operam com{" "}
             <span className="text-orange-500 font-bold">estrutura.</span>
